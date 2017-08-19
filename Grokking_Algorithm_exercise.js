@@ -76,3 +76,19 @@ function look_for_key_recur(box){
     }
   }
 }
+
+//CHAPTER 4
+function sumArr(arr){
+  var sum = 0;
+  if(arr.length === 0){
+    return sum += 0;
+  }else if(arr.length === 1){
+    return sum += arr[0];
+  }else{
+    arrFirst = arr.shift();
+    return sum = arrFirst + sumArr(arr);
+  }
+}
+
+console.log(sumArr([10, 2, 6]))
+
