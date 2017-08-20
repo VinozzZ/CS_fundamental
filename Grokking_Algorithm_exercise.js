@@ -92,3 +92,15 @@ function sumArr(arr){
 
 console.log(sumArr([10, 2, 6]))
 
+var count = 0;
+function countArr(arr){
+  if(arr.length === 0){
+    return count += 0;
+  }else{
+    count += 1
+    var newArr = arr.splice(0, arr.length -1)
+    return countArr(newArr)
+  }
+}
+
+console.log(countArr([2, 3, 4, 5]))
