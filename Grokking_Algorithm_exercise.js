@@ -104,3 +104,7 @@ function countArr(arr){
 }
 
 console.log(countArr([2, 3, 4, 5]))
+
+function maxNumInList(arr){
+  
+}
