@@ -105,6 +105,20 @@ function countArr(arr){
 
 console.log(countArr([2, 3, 4, 5]))
 
-function maxNumInList(arr){
-  
+
+function quickSort(arr) {
+  if (arr.length < 2) {
+    return arr;
+  }else{
+    var pivot = arr[0];
+    var less = arr.slice(1).filter((num)=>{
+      return num <= pivot;
+    });
+    var greater = arr.slice(1).filter((num)=>{
+      return num > pivot;
+    });
+    return [...quickSort(less), pivot, ...quickSort(greater)];
+  }
 }
+
+console.log(quickSort([10, 5, 2, 3]));
