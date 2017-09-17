@@ -136,3 +136,14 @@ function check_voter(name) {
 check_voter("tom");
 check_voter("mike");
 check_voter("tom");
+
+cache = {};
+function get_page(url) {
+  if(cache[url]) {
+    return cache[url];
+  } else {
+    data = get_data_from_server(url);
+    cache[url] = data;
+    return data;
+  }
+}
