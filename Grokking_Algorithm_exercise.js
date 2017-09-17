@@ -137,6 +137,7 @@ check_voter("tom");
 check_voter("mike");
 check_voter("tom");
 
+// pseudo code for cache logic
 cache = {};
 function get_page(url) {
   if(cache[url]) {
