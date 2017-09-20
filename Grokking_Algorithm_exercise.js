@@ -147,4 +147,4 @@ function get_page(url) {
     cache[url] = data;
     return data;
   }
-}
+};
